@@ -28,7 +28,7 @@
 //***************************************************************************
 // Automatically generated.                                                 *
 //***************************************************************************
-// IMC XML MD5: c49b27aa4bcdc6ad012fe602fbe29bb8                            *
+// IMC XML MD5: ecd89904ea2154713a01c6c76193cb8b                            *
 //***************************************************************************
 
 #ifndef DUNE_IMC_DEFINITIONS_HPP_INCLUDED_
@@ -23140,6 +23140,77 @@ namespace DUNE
       fieldsToJSON(std::ostream& os__, unsigned nindent__) const;
     };
 
+    //! UamTxRange.
+    class UamTxRange: public Message
+    {
+    public:
+      //! Sequence Id.
+      uint16_t seq;
+      //! Destination System.
+      std::string sys_dst;
+      //! Timeout.
+      fp32_t timeout;
+
+      static uint16_t
+      getIdStatic(void)
+      {
+        return 818;
+      }
+
+      UamTxRange(void);
+
+      UamTxRange*
+      clone(void) const
+      {
+        return new UamTxRange(*this);
+      }
+
+      void
+      clear(void);
+
+      bool
+      fieldsEqual(const Message& msg__) const;
+
+      int
+      validate(void) const;
+
+      uint8_t*
+      serializeFields(uint8_t* bfr__) const;
+
+      uint16_t
+      deserializeFields(const uint8_t* bfr__, uint16_t size__);
+
+      uint16_t
+      reverseDeserializeFields(const uint8_t* bfr__, uint16_t size__);
+
+      uint16_t
+      getId(void) const
+      {
+        return UamTxRange::getIdStatic();
+      }
+
+      const char*
+      getName(void) const
+      {
+        return "UamTxRange";
+      }
+
+      unsigned
+      getFixedSerializationSize(void) const
+      {
+        return 6;
+      }
+
+      unsigned
+      getVariableSerializationSize(void) const
+      {
+        return IMC::getSerializationSize(sys_dst);
+      }
+
+      void
+      fieldsToJSON(std::ostream& os__, unsigned nindent__) const;
+    };
+
     //! Formation Control Parameters.
     class FormCtrlParam: public Message
     {
@@ -25626,6 +25697,83 @@ namespace DUNE
       getFixedSerializationSize(void) const
       {
         return 29;
+      }
+
+      void
+      fieldsToJSON(std::ostream& os__, unsigned nindent__) const;
+    };
+
+    //! BUVMotorCommand.
+    class BUVMotorCommand: public Message
+    {
+    public:
+      //! tail_frequency.
+      fp32_t tail_frequency;
+      //! tail_deflection.
+      fp32_t tail_deflection;
+      //! tail_amplitude.
+      fp32_t tail_amplitude;
+      //! left_fin_frequency.
+      fp32_t left_fin_frequency;
+      //! left_fin_deflection.
+      fp32_t left_fin_deflection;
+      //! left_fin_amplitude.
+      fp32_t left_fin_amplitude;
+      //! right_fin_frequency.
+      fp32_t right_fin_frequency;
+      //! right_fin_deflection.
+      fp32_t right_fin_deflection;
+      //! right_fin_amplitude.
+      fp32_t right_fin_amplitude;
+
+      static uint16_t
+      getIdStatic(void)
+      {
+        return 910;
+      }
+
+      BUVMotorCommand(void);
+
+      BUVMotorCommand*
+      clone(void) const
+      {
+        return new BUVMotorCommand(*this);
+      }
+
+      void
+      clear(void);
+
+      bool
+      fieldsEqual(const Message& msg__) const;
+
+      int
+      validate(void) const;
+
+      uint8_t*
+      serializeFields(uint8_t* bfr__) const;
+
+      uint16_t
+      deserializeFields(const uint8_t* bfr__, uint16_t size__);
+
+      uint16_t
+      reverseDeserializeFields(const uint8_t* bfr__, uint16_t size__);
+
+      uint16_t
+      getId(void) const
+      {
+        return BUVMotorCommand::getIdStatic();
+      }
+
+      const char*
+      getName(void) const
+      {
+        return "BUVMotorCommand";
+      }
+
+      unsigned
+      getFixedSerializationSize(void) const
+      {
+        return 36;
       }
 
       void

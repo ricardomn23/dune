@@ -28,7 +28,7 @@
 //***************************************************************************
 // Automatically generated.                                                 *
 //***************************************************************************
-// IMC XML MD5: c49b27aa4bcdc6ad012fe602fbe29bb8                            *
+// IMC XML MD5: ecd89904ea2154713a01c6c76193cb8b                            *
 //***************************************************************************
 
 MESSAGE(1, EntityState)
@@ -315,6 +315,7 @@ MESSAGE(814, UamTxFrame)
 MESSAGE(815, UamRxFrame)
 MESSAGE(816, UamTxStatus)
 MESSAGE(817, UamRxRange)
+MESSAGE(818, UamTxRange)
 MESSAGE(820, FormCtrlParam)
 MESSAGE(821, FormationEval)
 MESSAGE(822, FormationControlParams)
@@ -347,4 +348,5 @@ MESSAGE(907, SadcReadings)
 MESSAGE(908, DmsDetection)
 MESSAGE(2006, TotalMagIntensity)
 MESSAGE(909, HomePosition)
+MESSAGE(910, BUVMotorCommand)
 #undef MESSAGE

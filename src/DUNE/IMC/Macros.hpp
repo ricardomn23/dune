@@ -28,7 +28,7 @@
 //***************************************************************************
 // Automatically generated.                                                 *
 //***************************************************************************
-// IMC XML MD5: c49b27aa4bcdc6ad012fe602fbe29bb8                            *
+// IMC XML MD5: ecd89904ea2154713a01c6c76193cb8b                            *
 //***************************************************************************
 
 #ifndef DUNE_IMC_MACROS_HPP_INCLUDED_
@@ -602,6 +602,8 @@
 #define DUNE_IMC_UAMTXSTATUS 816
 //! UamRxRange identification number.
 #define DUNE_IMC_UAMRXRANGE 817
+//! UamTxRange identification number.
+#define DUNE_IMC_UAMTXRANGE 818
 //! FormCtrlParam identification number.
 #define DUNE_IMC_FORMCTRLPARAM 820
 //! FormationEval identification number.
@@ -666,5 +668,7 @@
 #define DUNE_IMC_TOTALMAGINTENSITY 2006
 //! HomePosition identification number.
 #define DUNE_IMC_HOMEPOSITION 909
+//! BUVMotorCommand identification number.
+#define DUNE_IMC_BUVMOTORCOMMAND 910
 
 #endif

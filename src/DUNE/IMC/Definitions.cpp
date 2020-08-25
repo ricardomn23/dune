@@ -28,7 +28,7 @@
 //***************************************************************************
 // Automatically generated.                                                 *
 //***************************************************************************
-// IMC XML MD5: c49b27aa4bcdc6ad012fe602fbe29bb8                            *
+// IMC XML MD5: ecd89904ea2154713a01c6c76193cb8b                            *
 //***************************************************************************
 
 // ISO C++ 98 headers.
@@ -24423,6 +24423,74 @@ namespace DUNE
       IMC::toJSON(os__, "value", value, nindent__);
     }
 
+    UamTxRange::UamTxRange(void)
+    {
+      m_header.mgid = 818;
+      clear();
+    }
+
+    void
+    UamTxRange::clear(void)
+    {
+      seq = 0;
+      sys_dst.clear();
+      timeout = 0;
+    }
+
+    bool
+    UamTxRange::fieldsEqual(const Message& msg__) const
+    {
+      const IMC::UamTxRange& other__ = static_cast<const UamTxRange&>(msg__);
+      if (seq != other__.seq) return false;
+      if (sys_dst != other__.sys_dst) return false;
+      if (timeout != other__.timeout) return false;
+      return true;
+    }
+
+    int
+    UamTxRange::validate(void) const
+    {
+      return true;
+    }
+
+    uint8_t*
+    UamTxRange::serializeFields(uint8_t* bfr__) const
+    {
+      uint8_t* ptr__ = bfr__;
+      ptr__ += IMC::serialize(seq, ptr__);
+      ptr__ += IMC::serialize(sys_dst, ptr__);
+      ptr__ += IMC::serialize(timeout, ptr__);
+      return ptr__;
+    }
+
+    uint16_t
+    UamTxRange::deserializeFields(const uint8_t* bfr__, uint16_t size__)
+    {
+      const uint8_t* start__ = bfr__;
+      bfr__ += IMC::deserialize(seq, bfr__, size__);
+      bfr__ += IMC::deserialize(sys_dst, bfr__, size__);
+      bfr__ += IMC::deserialize(timeout, bfr__, size__);
+      return bfr__ - start__;
+    }
+
+    uint16_t
+    UamTxRange::reverseDeserializeFields(const uint8_t* bfr__, uint16_t size__)
+    {
+      const uint8_t* start__ = bfr__;
+      bfr__ += IMC::reverseDeserialize(seq, bfr__, size__);
+      bfr__ += IMC::reverseDeserialize(sys_dst, bfr__, size__);
+      bfr__ += IMC::reverseDeserialize(timeout, bfr__, size__);
+      return bfr__ - start__;
+    }
+
+    void
+    UamTxRange::fieldsToJSON(std::ostream& os__, unsigned nindent__) const
+    {
+      IMC::toJSON(os__, "seq", seq, nindent__);
+      IMC::toJSON(os__, "sys_dst", sys_dst, nindent__);
+      IMC::toJSON(os__, "timeout", timeout, nindent__);
+    }
+
     FormCtrlParam::FormCtrlParam(void)
     {
       m_header.mgid = 820;
@@ -27149,6 +27217,110 @@ namespace DUNE
       IMC::toJSON(os__, "height", height, nindent__);
       IMC::toJSON(os__, "depth", depth, nindent__);
       IMC::toJSON(os__, "alt", alt, nindent__);
+    }
+
+    BUVMotorCommand::BUVMotorCommand(void)
+    {
+      m_header.mgid = 910;
+      clear();
+    }
+
+    void
+    BUVMotorCommand::clear(void)
+    {
+      tail_frequency = 0;
+      tail_deflection = 0;
+      tail_amplitude = 0;
+      left_fin_frequency = 0;
+      left_fin_deflection = 0;
+      left_fin_amplitude = 0;
+      right_fin_frequency = 0;
+      right_fin_deflection = 0;
+      right_fin_amplitude = 0;
+    }
+
+    bool
+    BUVMotorCommand::fieldsEqual(const Message& msg__) const
+    {
+      const IMC::BUVMotorCommand& other__ = static_cast<const BUVMotorCommand&>(msg__);
+      if (tail_frequency != other__.tail_frequency) return false;
+      if (tail_deflection != other__.tail_deflection) return false;
+      if (tail_amplitude != other__.tail_amplitude) return false;
+      if (left_fin_frequency != other__.left_fin_frequency) return false;
+      if (left_fin_deflection != other__.left_fin_deflection) return false;
+      if (left_fin_amplitude != other__.left_fin_amplitude) return false;
+      if (right_fin_frequency != other__.right_fin_frequency) return false;
+      if (right_fin_deflection != other__.right_fin_deflection) return false;
+      if (right_fin_amplitude != other__.right_fin_amplitude) return false;
+      return true;
+    }
+
+    int
+    BUVMotorCommand::validate(void) const
+    {
+      return true;
+    }
+
+    uint8_t*
+    BUVMotorCommand::serializeFields(uint8_t* bfr__) const
+    {
+      uint8_t* ptr__ = bfr__;
+      ptr__ += IMC::serialize(tail_frequency, ptr__);
+      ptr__ += IMC::serialize(tail_deflection, ptr__);
+      ptr__ += IMC::serialize(tail_amplitude, ptr__);
+      ptr__ += IMC::serialize(left_fin_frequency, ptr__);
+      ptr__ += IMC::serialize(left_fin_deflection, ptr__);
+      ptr__ += IMC::serialize(left_fin_amplitude, ptr__);
+      ptr__ += IMC::serialize(right_fin_frequency, ptr__);
+      ptr__ += IMC::serialize(right_fin_deflection, ptr__);
+      ptr__ += IMC::serialize(right_fin_amplitude, ptr__);
+      return ptr__;
+    }
+
+    uint16_t
+    BUVMotorCommand::deserializeFields(const uint8_t* bfr__, uint16_t size__)
+    {
+      const uint8_t* start__ = bfr__;
+      bfr__ += IMC::deserialize(tail_frequency, bfr__, size__);
+      bfr__ += IMC::deserialize(tail_deflection, bfr__, size__);
+      bfr__ += IMC::deserialize(tail_amplitude, bfr__, size__);
+      bfr__ += IMC::deserialize(left_fin_frequency, bfr__, size__);
+      bfr__ += IMC::deserialize(left_fin_deflection, bfr__, size__);
+      bfr__ += IMC::deserialize(left_fin_amplitude, bfr__, size__);
+      bfr__ += IMC::deserialize(right_fin_frequency, bfr__, size__);
+      bfr__ += IMC::deserialize(right_fin_deflection, bfr__, size__);
+      bfr__ += IMC::deserialize(right_fin_amplitude, bfr__, size__);
+      return bfr__ - start__;
+    }
+
+    uint16_t
+    BUVMotorCommand::reverseDeserializeFields(const uint8_t* bfr__, uint16_t size__)
+    {
+      const uint8_t* start__ = bfr__;
+      bfr__ += IMC::reverseDeserialize(tail_frequency, bfr__, size__);
+      bfr__ += IMC::reverseDeserialize(tail_deflection, bfr__, size__);
+      bfr__ += IMC::reverseDeserialize(tail_amplitude, bfr__, size__);
+      bfr__ += IMC::reverseDeserialize(left_fin_frequency, bfr__, size__);
+      bfr__ += IMC::reverseDeserialize(left_fin_deflection, bfr__, size__);
+      bfr__ += IMC::reverseDeserialize(left_fin_amplitude, bfr__, size__);
+      bfr__ += IMC::reverseDeserialize(right_fin_frequency, bfr__, size__);
+      bfr__ += IMC::reverseDeserialize(right_fin_deflection, bfr__, size__);
+      bfr__ += IMC::reverseDeserialize(right_fin_amplitude, bfr__, size__);
+      return bfr__ - start__;
+    }
+
+    void
+    BUVMotorCommand::fieldsToJSON(std::ostream& os__, unsigned nindent__) const
+    {
+      IMC::toJSON(os__, "tail_frequency", tail_frequency, nindent__);
+      IMC::toJSON(os__, "tail_deflection", tail_deflection, nindent__);
+      IMC::toJSON(os__, "tail_amplitude", tail_amplitude, nindent__);
+      IMC::toJSON(os__, "left_fin_frequency", left_fin_frequency, nindent__);
+      IMC::toJSON(os__, "left_fin_deflection", left_fin_deflection, nindent__);
+      IMC::toJSON(os__, "left_fin_amplitude", left_fin_amplitude, nindent__);
+      IMC::toJSON(os__, "right_fin_frequency", right_fin_frequency, nindent__);
+      IMC::toJSON(os__, "right_fin_deflection", right_fin_deflection, nindent__);
+      IMC::toJSON(os__, "right_fin_amplitude", right_fin_amplitude, nindent__);
     }
   }
 }
